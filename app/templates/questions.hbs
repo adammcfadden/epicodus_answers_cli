@@ -4,7 +4,7 @@
   </div>
     <ul class="list-group">
       {{#each model as |question|}}
-      {{#link-to 'question' question.id}}<li class="list-group-item">{{question.question}} - {{question.author}}</li>{{/link-to}}
+      {{#link-to 'question' question.id}}<li class="list-group-item">{{question.question}} - {{question.author}}<span style="float: right">{{question.formattedDate}}</span></li>{{/link-to}}
       {{/each}}
     </ul>
   <div class="panel-footer">

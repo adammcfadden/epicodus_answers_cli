@@ -4,7 +4,7 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
     <h3>Question: {{model.question}}</h3>
-    <h4>Author: {{model.author}}</h4>
+    <h4>Author: {{model.author}}<span style="float: right">{{model.formattedDate}}</span></h4>
   </div>
   <div class="panel-body">
     <h4>Description:</h4>
@@ -22,7 +22,7 @@
 {{#each model.answers as |answer|}}
 <div {{action 'showAnswer' answer}} class="panel panel-primary">
   <div class="panel-heading">
-    <h4>{{answer.author}}</h4>
+    <h4>{{answer.author}}<span style="float: right">{{answer.formattedDate}}</span></h4>
   </div>
   <div class="panel-body">
     {{answer.answer}}
@@ -35,7 +35,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">{{currentAnswer.author}}</h4>
+        <h4 class="modal-title">{{currentAnswer.author}}<span style="float: right">{{currentAnswer.formattedDate}}</span></h4>
       </div>
       <div class="modal-body">
         <p>{{currentAnswer.answer}}</p>
