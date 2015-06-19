@@ -1,4 +1,27 @@
+body {
+  background-color: #232429;
+  background-image: url('/assets/images/dot.png');
+  color: #fff;
+}
+
+.panel, .modal{
+  color: #000;
+}
+
 #page-head{
   text-decoration: none;
   color: #428BCA;
+}
+
+.panel-success > .panel-heading {
+  background-color: #174E18;
+  color: #fff;
+}
+.panel-success{
+  border-color: #174E18;
+}
+
+.btn-success {
+  background-color: #174E18;
+  border-color: #174E18;
 }

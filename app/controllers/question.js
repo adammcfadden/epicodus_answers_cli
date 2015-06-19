@@ -8,17 +8,21 @@ export default Ember.Controller.extend({
     },
     delete: function(){
       if (confirm('Do you really want to delete this question?')) {
-        if (confirm('But it\'s such a good question. Are you sure?')) {
-          this.get('model').destroyRecord();
-        }
+        this.get('model').destroyRecord();
       }
-
       this.transitionToRoute('questions');
     },
     save: function(){
-      this.set('question', this.get('question'));
-      this.set('author', this.get('author'));
-      this.set('description', this.get('description'));
+      var dateOptions = {
+        weekday: "long", year: "numeric", month: "short",
+        day: "numeric", hour: "2-digit", minute: "2-digit"
+      };
+      this.get('model').set('question', this.get('question'));
+      this.get('model').set('author', this.get('author'));
+      this.get('model').set('description', this.get('description'));
+      this.get('model').set('date', new Date());
+      this.get('model').set('formattedDate', (new Date().toLocaleDateString("en-US", dateOptions)));
+      this.get('model').save();
       this.set('notEditing', true);
     },
     showAnswer: function(answer) {

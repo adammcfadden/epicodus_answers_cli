@@ -1,5 +1,4 @@
 {{#if notEditing}}
-{{outlet}}
 
 <div class="panel panel-primary">
   <div class="panel-heading">
@@ -7,20 +6,25 @@
     <h4>Author: {{model.author}}<span style="float: right">{{model.formattedDate}}</span></h4>
   </div>
   <div class="panel-body">
-    <h4>Description:</h4>
-    <p>{{model.description}}</p>
-  </div>
-  <div class="panel-footer">
-    <span {{action 'edit'}} class="btn btn-primary">Edit this Question</span>
-    <span {{action 'delete'}} class="btn btn-danger">Delete this Question</span>
-    {{#link-to 'new-answer'}}<span class="btn btn-primary">Answer this Question</span>{{/link-to}}
+    <div class="row">
+      <div class="col-md-9">
+        <h4>Description:</h4>
+        <p>{{model.description}}</p>
+      </div>
+      <div class="col-md-3">
+        <span {{action 'edit'}} class="btn btn-primary">Edit this Question</span><br>
+        <span {{action 'delete'}} class="btn btn-danger">Delete this Question</span>
+      </div>
+    </div>
   </div>
 </div>
+{{#link-to 'new-answer'}}<span style="width: 100%;" class="btn btn-success">Answer this Question</span>{{/link-to}}
+{{outlet}}
 
 <h2>Answers:</h2>
 
 {{#each model.answers as |answer|}}
-<div {{action 'showAnswer' answer}} class="panel panel-primary">
+<div {{action 'showAnswer' answer}} class="panel panel-success">
   <div class="panel-heading">
     <h4>{{answer.author}}<span style="float: right">{{answer.formattedDate}}</span></h4>
   </div>

@@ -19,7 +19,7 @@ export default Ember.Controller.extend({
 
     this.set('question', null);
     this.set('author', null);
-    this.set('descrition', null);
+    this.set('description', null);
     }
   }
 });
