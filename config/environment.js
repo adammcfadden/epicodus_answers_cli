@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'code-review',
     environment: environment,
+    firebase: 'https://epicodus-answers.firebaseio.com/'
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
