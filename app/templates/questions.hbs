@@ -1,0 +1,14 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Questions</h2>
+  </div>
+    <ul class="list-group">
+      {{#each model as |question|}}
+      {{#link-to 'question' question.id}}<li class="list-group-item">{{question.question}} - {{question.author}}</li>{{/link-to}}
+      {{/each}}
+    </ul>
+  <div class="panel-footer">
+    {{outlet}}
+    {{#link-to 'new-question'}}<span class="btn btn-primary">Ask A Question</span>{{/link-to}}
+</div>
+</div>

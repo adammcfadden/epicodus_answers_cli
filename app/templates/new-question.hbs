@@ -1,0 +1,10 @@
+<h3>What Would you like to ask?</h3>
+<div class="form-group">
+  <form>
+    {{input valueBinding="question" class="form-control" id="question" placeholder="Enter your question"}}<br>
+    {{input valueBinding="author" class="form-control" id="author" placeholder="Enter your name"}}<br>
+    {{textarea valueBinding="description" class="form-control" rows="5" id="description" placeholder="Enter some more information"}}<br>
+
+    <button class="btn btn-primary" {{action 'save'}}>Submit Question</button>
+  </form>
+</div>

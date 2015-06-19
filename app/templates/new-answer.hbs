@@ -1,0 +1,8 @@
+<div class="form-group">
+  <form>
+    {{textarea valueBinding="answer" class="form-control" rows="5" id="answer" placeholder="Enter some more information"}}<br>
+    {{input valueBinding="authorName" class="form-control" id="author" placeholder="Enter your name"}}<br>
+
+    <button class="btn btn-primary" {{action 'save'}}>Submit Answer</button>
+  </form>
+</div>
