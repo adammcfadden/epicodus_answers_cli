@@ -55,9 +55,9 @@
 
 <div class="form-group">
   <form>
-    {{input valueBinding="question" class="form-control" id="question" placeholder="Enter your question"}}<br>
-    {{input valueBinding="author" class="form-control" id="author" placeholder="Enter your name"}}<br>
-    {{textarea valueBinding="description" class="form-control" rows="5" id="description" placeholder="Enter some more information"}}<br>
+    {{input value=model.question class="form-control" id="question"}}<br>
+    {{input value=model.author class="form-control" id="author"}}<br>
+    {{textarea value=model.description class="form-control" rows="5" id="description"}}<br>
 
     <button class="btn btn-primary" {{action 'save'}}>Submit Question</button>
   </form>

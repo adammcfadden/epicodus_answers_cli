@@ -17,9 +17,9 @@ export default Ember.Controller.extend({
         weekday: "long", year: "numeric", month: "short",
         day: "numeric", hour: "2-digit", minute: "2-digit"
       };
-      this.get('model').set('question', this.get('question'));
-      this.get('model').set('author', this.get('author'));
-      this.get('model').set('description', this.get('description'));
+      this.get('model').set('question', this.get('model.question'));
+      this.get('model').set('author', this.get('model.author'));
+      this.get('model').set('description', this.get('model.description'));
       this.get('model').set('date', new Date());
       this.get('model').set('formattedDate', (new Date().toLocaleDateString("en-US", dateOptions)));
       this.get('model').save();
